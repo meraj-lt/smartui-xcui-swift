@@ -19,6 +19,13 @@ public class LTApp {
         do {
             var screenshotDetails: [String: String] = [:]
             let arguments = ProcessInfo.processInfo.environment
+
+            print("below is env variables!!!")
+            var count = 0
+            for (key, value) in arguments {
+                count += 1
+                print("\(count)-\(key) = \(value)")
+            }
         
             screenshotDetails[Constants.KeyConstants.screenshotName] = name
             screenshotDetails[Constants.KeyConstants.screenshotType] = "lambdatest-espresso-swift"
