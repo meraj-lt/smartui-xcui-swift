@@ -28,7 +28,7 @@ public class LTApp {
             }
         
             screenshotDetails[Constants.KeyConstants.screenshotName] = name
-            screenshotDetails[Constants.KeyConstants.screenshotType] = "lambdatest-espresso-swift"
+            screenshotDetails[Constants.KeyConstants.screenshotType] = "xcui-real-device"
             screenshotDetails[Constants.KeyConstants.projectToken] = arguments[Constants.KeyConstants.projectToken]
             screenshotDetails[Constants.KeyConstants.buildName] = arguments[Constants.KeyConstants.buildName]
             screenshotDetails[Constants.KeyConstants.buildId] = arguments[Constants.KeyConstants.buildId]
@@ -38,7 +38,7 @@ public class LTApp {
             screenshotDetails[Constants.KeyConstants.baseline] = arguments[Constants.KeyConstants.baseline]
             screenshotDetails[Constants.KeyConstants.browser] = arguments[Constants.KeyConstants.browser]
             screenshotDetails[Constants.KeyConstants.cropNavigationBar] = arguments[Constants.KeyConstants.cropNavigationBar]
-            screenshotDetails[Constants.KeyConstants.cropStatusBar] = arguments[Constants.KeyConstants.cropStatusBar]
+            screenshotDetails[Constants.KeyConstants.cropStatusBar] = "true" //arguments[Constants.KeyConstants.cropStatusBar]
             screenshotDetails[Constants.KeyConstants.customCropStatusBar] = customCropStatusBar
             screenshotDetails[Constants.KeyConstants.customCropNavigationBar] = customCropNavigationBar
 
