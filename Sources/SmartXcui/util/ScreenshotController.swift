@@ -9,9 +9,14 @@ public class ScreenshotController: UIViewController {
   }
 
   public func takeScreenshot() throws -> String {
-    guard let imageData = XCUIScreen.main.screenshot().image.pngData() else {
-        throw LTAppError.screenshotError("Failed to take screenshot")
+    do {
+      let screenshot = XCUIScreen.main.screenshot()
+      guard let imageData = screenshot.image.pngData() else {
+        throw LTAppError.screenshotError("Failed to convert screenshot to PNG data")
+      }
+      return imageData.base64EncodedString()
+    } catch {
+      throw LTAppError.screenshotError("Failed to take screenshot: \(error.localizedDescription)")
     }
-    return imageData.base64EncodedString()
   }
 }
