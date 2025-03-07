@@ -4,7 +4,7 @@ import Foundation
 struct Constants {
     
     struct ApiConstants {
-        static let UPLOAD_API = "https://api.lambdatest.com/visualui/1.0/screenshot/save"
+        static let UPLOAD_API = "https://stage-api.lambdatestinternal.com/visualui/1.0/screenshot/save"
         static let REAL_DEVICE_UPLOAD_API = "https://mobile-api.lambdatest.com/framework/v1/espresso/screenshot"
     }
 
