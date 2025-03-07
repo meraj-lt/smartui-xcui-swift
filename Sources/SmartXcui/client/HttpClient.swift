@@ -29,7 +29,7 @@ class HttpClient {
         let semaphore = DispatchSemaphore(value: 0)
         var responseString: String?
         
-        let task = URLSession.shared.dataTask(with: request) { _, response, error in
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
                 print("Network error while posting screenshot: \(error.localizedDescription)")
             } else if let httpResponse = response as? HTTPURLResponse {
@@ -37,7 +37,9 @@ class HttpClient {
                     print("Screenshot posted successfully: \(httpResponse.statusCode)")
                     responseString = String(httpResponse.statusCode)
                 } else {
-                    print("Unexpected response code for post Screenshot: \(httpResponse.statusCode)")
+                    let responseBody = data != nil ? String(data: data!, encoding: .utf8) ?? "Invalid response body" : "No response body"
+                    print("Unexpected response code for post Screenshot: \(httpResponse.statusCode) \nResponse Body: \(responseBody)")
+                    print("Unexpected response code: \(httpResponse.statusCode) response-body : \(String(describing: response))")
                 }
             }
             semaphore.signal()
