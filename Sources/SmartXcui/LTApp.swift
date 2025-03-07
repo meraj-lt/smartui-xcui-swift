@@ -31,7 +31,7 @@ public class LTApp {
             screenshotDetails[Constants.KeyConstants.screenshotType] = "xcui-real-device"
             screenshotDetails[Constants.KeyConstants.projectToken] = arguments[Constants.KeyConstants.projectToken]
             screenshotDetails[Constants.KeyConstants.buildName] = arguments[Constants.KeyConstants.buildName]
-            screenshotDetails[Constants.KeyConstants.buildId] = arguments[Constants.KeyConstants.buildId]
+            screenshotDetails[Constants.KeyConstants.buildId] = arguments[Constants.KeyConstants.smartuiBuildId]
             screenshotDetails[Constants.KeyConstants.deviceName] = arguments[Constants.KeyConstants.deviceName]
             screenshotDetails[Constants.KeyConstants.resolution] = arguments[Constants.KeyConstants.resolution]
             screenshotDetails[Constants.KeyConstants.os] = arguments[Constants.KeyConstants.os]
