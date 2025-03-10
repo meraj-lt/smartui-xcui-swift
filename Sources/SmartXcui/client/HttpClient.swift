@@ -39,7 +39,6 @@ class HttpClient {
                 } else {
                     let responseBody = data != nil ? String(data: data!, encoding: .utf8) ?? "Invalid response body" : "No response body"
                     print("Unexpected response code for post Screenshot: \(httpResponse.statusCode) \nResponse Body: \(responseBody)")
-                    print("Unexpected response code: \(httpResponse.statusCode) response-body : \(String(describing: response))")
                 }
             }
             semaphore.signal()
