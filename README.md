@@ -38,12 +38,6 @@ final class MyAppUITests: XCTestCase {
 }
 ```
 
-Running the test above normally will result in the following log:
-
-```sh-session
-[smartui:sdk] Smartui CLI is not running, disabling screenshots.
-```
-Running with App Automate will capture the screenshots as expected.
 
 ## Configuration
 
